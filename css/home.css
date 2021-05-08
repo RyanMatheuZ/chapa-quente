@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-image: url("../img/header-bg-image.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;
+  padding: 0.5rem 0;
+}
+.header-button {
+  background-color: #FFFFFFB9;
+  border-radius: 0.5rem;
+  border: 1.5px solid #000;
+  font-size: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  outline-style: none;
+  cursor: pointer;
+}
+.header-navmenu {
+  align-self: flex-start;
+  color: #FFF;
+  background-color: #000;
+  display: none;
+  width: 25%;
+  height: 95vh;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 2;
+}
+@media (max-width: 550px) {
+  .header-navmenu {
+    width: 60%;
+  }
+}
+.header-navmenu li {
+  text-align: center;
+}
+.header-navmenu li a {
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  display: block;
+  font-weight: 600;
+  padding: 1rem;
+}
+.header-logo {
+  background-color: #FFFFFF46;
+  border-radius: 50%;
+  width: 20rem;
+  padding: 0.5rem;
+}
+@media (max-width: 350px) {
+  .header-logo {
+    width: 15rem;
+  }
+}
+.header-apresentation {
+  padding: 0 1rem;
+}
+.header-apresentation h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+}
+@media (max-width: 350px) {
+  .header-apresentation h1 {
+    font-size: 2rem;
+  }
+}
+.header-apresentation p {
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+.header-icon {
+  width: 1.5rem;
+  margin: 0 auto;
+}
+
+.active-menu {
+  display: block;
+}
+
+/*# sourceMappingURL=home.css.map */

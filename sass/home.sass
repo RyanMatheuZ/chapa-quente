@@ -1,0 +1,89 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    width: 100%
+    height: 100%
+
+    a
+        text-decoration: none
+
+    ul
+        list-style: none
+
+.header
+    @include mixins.flex-center
+    justify-content: space-around
+    flex-direction: column
+    background-image: url('../img/header-bg-image.png')
+    background-position: center
+    background-size: cover
+    width: 100%
+    height: 95vh
+    padding: 0.5rem 0
+
+    &-button
+        background-color: #FFFFFFB9
+        border-radius: 0.5rem
+        border: 1.5px solid #000
+        font-size: 0
+        height: 40px
+        width: 40px
+        padding: 0.5rem
+        outline-style: none
+        cursor: pointer
+
+    &-navmenu
+        align-self: flex-start
+        color: #FFF
+        background-color: #000
+        display: none
+        width: 25%
+        height: 95vh
+        padding: 0.5rem
+        position: absolute
+        z-index: 2
+        @media (max-width: 550px)
+            width: 60%
+
+        li
+            text-align: center
+
+            a
+                @include mixins.text
+                display: block
+                font-weight: 600
+                padding: 1rem
+
+    &-logo
+        background-color: #FFFFFF46
+        border-radius: 50%
+        width: 20rem
+        padding: 0.5rem
+        @media (max-width: 350px)
+            width: 15rem
+
+    &-apresentation
+        padding: 0 1rem
+
+        h1
+            @include mixins.main-heading
+            @media (max-width: 350px)
+                font-size: 2rem
+
+        p
+            @include mixins.text
+            text-align: center
+            padding: 1rem 0
+
+    &-icon
+        width: 1.5rem
+        margin: 0 auto
+
+.active-menu
+    display: block
