@@ -6,15 +6,19 @@
     align-items: center
 
 @mixin text
-    color: variables.$secondary-text-color
-    font-family: 'Inter', sans-serif   
-    font-size: 0.9rem
+    color: variables.$primary-color
+    text-align: center
+    font-family: 'Inter', sans-serif
 
-@mixin main-heading
-    color: variables.$secondary-text-color
+@mixin burger-text
+    text-align: left
+    padding: 1rem
+
+@mixin heading
+    color: variables.$primary-color
     text-align: center
     font-family: 'Playfair Display', serif
-    font-size: 2.5rem
 
 @mixin section-container
-    padding: 10rem
+    background-color: variables.$bg-color
+    padding: 2.5rem

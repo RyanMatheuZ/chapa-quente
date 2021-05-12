@@ -16,15 +16,20 @@ body
     ul
         list-style: none
 
+    hr
+        border: 1px solid #000
+        width: 40px
+        margin: 0 auto
+
 .header
     @include mixins.flex-center
-    justify-content: space-around
     flex-direction: column
-    background-image: url('../img/header-bg-image.png')
+    justify-content: space-around
+    background-image: url('../img/header-bg-image.jpg')
     background-position: center
     background-size: cover
     width: 100%
-    height: 95vh
+    height: 100vh
     padding: 0.5rem 0
 
     &-button
@@ -40,24 +45,26 @@ body
 
     &-navmenu
         align-self: flex-start
-        color: #FFF
         background-color: #000
+        color: variables.$secondary-color
         display: none
         width: 25%
-        height: 95vh
+        height: 100vh
         padding: 0.5rem
         position: absolute
         z-index: 2
-        @media (max-width: 550px)
-            width: 60%
+        @media (max-width: 700px)
+            width: 55%
 
         li
             text-align: center
 
             a
                 @include mixins.text
+                color: variables.$secondary-color
                 display: block
-                font-weight: 600
+                font-weight: 400
+                font-size: clamp(0.5rem, 0.5rem + 3vw, 1rem)
                 padding: 1rem
 
     &-logo
@@ -65,25 +72,104 @@ body
         border-radius: 50%
         width: 20rem
         padding: 0.5rem
-        @media (max-width: 350px)
+        @media (max-width: 450px)
             width: 15rem
 
     &-apresentation
         padding: 0 1rem
 
         h1
-            @include mixins.main-heading
-            @media (max-width: 350px)
-                font-size: 2rem
+            @include mixins.heading
+            color: variables.$secondary-color
+            font-size: clamp(1.45rem, 1.15rem + 3vw, 2.5rem)
 
         p
             @include mixins.text
-            text-align: center
+            color: variables.$secondary-color
+            font-size: 0.9rem
             padding: 1rem 0
 
     &-icon
         width: 1.5rem
         margin: 0 auto
+
+.section-our-menu
+    @include mixins.section-container
+
+    h2
+        @include mixins.text
+        font-size: clamp(1rem, 0.5rem + 3vw, 1.35rem)
+        font-weight: 400
+        padding: 1rem
+
+    h3
+        @include mixins.heading
+        font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem)
+        font-weight: 700
+        padding: 1rem
+
+    .hamburgers-type
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        padding: 1rem 0
+
+        .burger
+            @include mixins.flex-center
+            background-color: #FFF
+            box-shadow: 0 0 10px #000
+            justify-content: space-around
+            width: 500px
+            margin: 1rem
+            padding: 0.5rem
+            cursor: pointer
+            transition: 0.3s ease-in-out
+            @media (max-width: 700px)
+                flex-direction: column
+                width: 300px
+
+            &:hover
+                transform: scale(1.03)
+                transition: 0.3s ease-in-out
+
+            &-image
+                @include mixins.flex-center
+                margin: 0.5rem
+                @media (max-width: 700px)
+                    width: 200px
+                    height: 200px
+                    img
+                        width: 100%
+                        height: 100%
+
+            &-description
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                margin: 0.5rem
+
+                h4
+                    @include mixins.text
+                    @include mixins.burger-text
+                    font-weight: 700
+                    font-size: clamp(1.2rem, 0.5rem + 3vw, 1.4rem)
+
+                p
+                    @include mixins.text
+                    @include mixins.burger-text
+                    font-weight: 400
+                    font-size: 0.9rem
+                    line-height: 1.5rem
+                
+                span
+                    font-size: clamp(0.55rem, 0.5rem + 3vw, 1rem)
+
+                .price
+                    @include mixins.text
+                    @include mixins.burger-text
+                    color: variables.$tertiary-color
+                    font-weight: 700
+                    font-size: clamp(0.75rem, 0.70rem + 3vw, 1.35rem)
 
 .active-menu
     display: block

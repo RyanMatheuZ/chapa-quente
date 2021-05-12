@@ -14,18 +14,23 @@ body a {
 body ul {
   list-style: none;
 }
+body hr {
+  border: 1px solid #000;
+  width: 40px;
+  margin: 0 auto;
+}
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
   flex-direction: column;
-  background-image: url("../img/header-bg-image.png");
+  justify-content: space-around;
+  background-image: url("../img/header-bg-image.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   padding: 0.5rem 0;
 }
 .header-button {
@@ -41,29 +46,31 @@ body ul {
 }
 .header-navmenu {
   align-self: flex-start;
-  color: #FFF;
   background-color: #000;
+  color: #FFF;
   display: none;
   width: 25%;
-  height: 95vh;
+  height: 100vh;
   padding: 0.5rem;
   position: absolute;
   z-index: 2;
 }
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .header-navmenu {
-    width: 60%;
+    width: 55%;
   }
 }
 .header-navmenu li {
   text-align: center;
 }
 .header-navmenu li a {
-  color: #FFF;
+  color: #000;
+  text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  color: #FFF;
   display: block;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: clamp(0.5rem, 0.5rem + 3vw, 1rem);
   padding: 1rem;
 }
 .header-logo {
@@ -72,7 +79,7 @@ body ul {
   width: 20rem;
   padding: 0.5rem;
 }
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .header-logo {
     width: 15rem;
   }
@@ -81,26 +88,127 @@ body ul {
   padding: 0 1rem;
 }
 .header-apresentation h1 {
-  color: #FFF;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-}
-@media (max-width: 350px) {
-  .header-apresentation h1 {
-    font-size: 2rem;
-  }
+  color: #FFF;
+  font-size: clamp(1.45rem, 1.15rem + 3vw, 2.5rem);
 }
 .header-apresentation p {
-  color: #FFF;
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  color: #000;
   text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #FFF;
+  font-size: 0.9rem;
   padding: 1rem 0;
 }
 .header-icon {
   width: 1.5rem;
   margin: 0 auto;
+}
+
+.section-our-menu {
+  background-color: #E2E2E2;
+  padding: 2.5rem;
+}
+.section-our-menu h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.35rem);
+  font-weight: 400;
+  padding: 1rem;
+}
+.section-our-menu h3 {
+  color: #000;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
+  font-weight: 700;
+  padding: 1rem;
+}
+.section-our-menu .hamburgers-type {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.section-our-menu .hamburgers-type .burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  box-shadow: 0 0 10px #000;
+  justify-content: space-around;
+  width: 500px;
+  margin: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 700px) {
+  .section-our-menu .hamburgers-type .burger {
+    flex-direction: column;
+    width: 300px;
+  }
+}
+.section-our-menu .hamburgers-type .burger:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
+.section-our-menu .hamburgers-type .burger-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+@media (max-width: 700px) {
+  .section-our-menu .hamburgers-type .burger-image {
+    width: 200px;
+    height: 200px;
+  }
+  .section-our-menu .hamburgers-type .burger-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.section-our-menu .hamburgers-type .burger-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+.section-our-menu .hamburgers-type .burger-description h4 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 0.5rem + 3vw, 1.4rem);
+}
+.section-our-menu .hamburgers-type .burger-description p {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.section-our-menu .hamburgers-type .burger-description span {
+  font-size: clamp(0.55rem, 0.5rem + 3vw, 1rem);
+}
+.section-our-menu .hamburgers-type .burger-description .price {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  padding: 1rem;
+  color: #1F1104;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 0.70rem + 3vw, 1.35rem);
 }
 
 .active-menu {
