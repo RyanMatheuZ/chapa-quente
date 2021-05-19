@@ -1,24 +1,24 @@
 @use 'variables'
 
 @mixin flex-center
+    align-items: center
     display: flex
     justify-content: center
-    align-items: center
-
-@mixin text
-    color: variables.$primary-color
-    text-align: center
-    font-family: 'Inter', sans-serif
-
-@mixin burger-text
-    text-align: left
-    padding: 1rem
 
 @mixin heading
     color: variables.$primary-color
     text-align: center
     font-family: 'Playfair Display', serif
 
+@mixin product-text
+    text-align: left
+    padding: 1rem
+
 @mixin section-container
     background-color: variables.$bg-color
     padding: 2.5rem
+
+@mixin text
+    color: variables.$primary-color
+    text-align: center
+    font-family: 'Inter', sans-serif

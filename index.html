@@ -8,189 +8,343 @@
     <title>Início | Chapa Quente</title>
     <link rel="stylesheet" href="./css/home.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./img/chapa-quente-logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/icons/chapa-quente-logo.svg" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@700&display=swap">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="0PhQEbiFIY9XvPOAvADjVQiJm8tDioAWszmZNRrHPJA"/>
 </head>
 
 <body>
     <header class="header">
-        <button id="btn-menu" class="header-button">
-            <img src="./img/menu-icon.svg" alt="Menu hambúrguer">
+        <button id="button--active" class="button">
+            <img src="./img/icons/menu-icon.svg" alt="Menu hambúrguer">
         </button>
 
-        <nav id="nav-menu" class="header-navmenu">
+        <nav id="nav-menu" class="nav">
             <ul>
-                <li><a href="#our-menu">Nosso menu</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li>
-                    <button id="btn-close-menu" class="header-button">
-                        <img src="./img/exit-icon.svg" alt="Botão para fechar o menu">
+                <li class="nav__item"><a href="#burgers" class="nav__link">Burguers</a></li>
+				<li class="nav__item"><a href="#drinks" class="nav__link">Drinks</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+                <li class="nav__item"><a href="#contact"class="nav__link">Contato</a></li>
+                <li class="nav__item">
+                    <button id="button--disabled" class="button">
+                        <img src="./img/icons/exit-icon.svg" alt="Botão para fechar o menu">
                     </button>
                 </li>
             </ul>
         </nav>
 
-        <div class="header-logo">
-            <img src="./img/chapa-quente-logo.svg" alt="Logo Chapa Quente">
-        </div>
+        <article class="logo">
+            <img src="./img/icons/chapa-quente-logo.svg" alt="Logo Chapa Quente">
+        </article>
 
-        <div class="header-apresentation">
-            <h1>A uma mordida de começar bem</h1>
+        <article class="apresentation">
+            <h1 class="apresentation__title">A uma mordida de começar bem</h1>
 
-            <p>Bem vindo à hamburgueria Chapa Quente. Sinta-se à vontade!</p>
+            <p class="apresentation__text">Bem vindo à hamburgueria Chapa Quente. Sinta-se à vontade!</p>
 
-            <div class="header-icon">
-                <img src="./img/triangle-icon.svg" alt="Ícone para baixo">
-            </div>
-        </div>
+            <footer class="icon">
+                <img src="./img/icons/triangle-white-icon.svg" alt="Veja mais">
+            </footer>
+        </article>
     </header>
 
     <main>
-        <section class="section-our-menu" id="our-menu">
-            <h2>Nosso menu</h2>
+        <section id="burgers" class="burgers our-menu">
+            <h2 class="our-menu__title">Menu</h2>
 
-            <hr>
+            <hr class="our-menu__item">
 
-            <h3>Especialidades da Casa</h3>
+            <h3 class="our-menu__subtitle">Burguers</h3>
 
-            <article class="hamburgers-type">
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/bigburgo-photo.jpg" alt="Foto do Big Burgo">
+            <div class="product-box">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/bigburgo-photo.jpg" alt="Foto do Big Burgo">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Big Burgo</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Big Burgo</h4>
 
-                        <p>
-                            Hambúrguer de 150g de Angus, queijo cheddar,
+                        <p class="product-description__text">
+                            Hambúrguer de 150g de Angus, queijo Cheddar,
                             alface, tomate e molho branco
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 19,90
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 19,90
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/lomejor-photo.jpg" alt="Foto do Lo Mejor">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/lomejor-photo.jpg" alt="Foto do Lo Mejor">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Lo Mejor</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Lo Mejor</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Hambúrguer de 150g de Angus, queijo Prato, picles,
                             alface, tomate e anéis de cebola roxa
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 23,50
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 23,50
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/duplobacon-photo.jpg" alt="Foto do Duplo Bacon">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/duplobacon-photo.jpg" alt="Foto do Duplo Bacon">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Duplo Bacon</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Duplo Bacon</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Hambúrguer de 200g de Wagyu grelhado no fogo, queijo Cheddar,
                             bacon e omelete
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 22,00
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 22,00
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/siriburguer-photo.jpg" alt="Foto do Siri Burguer">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/siriburguer-photo.jpg" alt="Foto do Siri Burguer">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Siri Burguer</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Siri Burguer</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Hambúrguer de 150g de Devon grelhado no fogo, queijo Cheddar,
                             alface e tomate
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 18,00
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 18,00
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/minidelicia-photo.jpg" alt="Foto do Mini Delícia">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/minidelicia-photo.jpg" alt="Foto do Mini Delícia">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Mini Delícia</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Mini Delícia</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Hambúrguer de 100g de Devon, queijo Cheddar, bacon,
                             alface, tomate e anéis de cebola
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 15,50
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 15,50
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/bull-photo.jpg" alt="Foto do Bull">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/bull-photo.jpg" alt="Foto do Bull">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Bull</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Bull</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Hambúrguer de 200g de Wagyu grelhado no fogo, queijo Edam,
                             bacon, tomate e anéis de cebola roxa
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 27,90
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 27,90
                         </p>
                     </div>
                 </article>
 
-                <article class="burger">
-                    <div class="burger-image">
-                        <img src="./img/burguers-img/veggie-photo.jpg" alt="Foto do Veggie">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/burguers-image/veggie-photo.jpg" alt="Foto do Veggie">
                     </div>
 
-                    <div class="burger-description">
-                        <h4>Veggie</h4>
+                    <div class="product-description">
+                        <h4 class="product-description__title">Veggie</h4>
 
-                        <p>
+                        <p class="product-description__text">
                             Proteína texturizada de 150g de batata, beterraba,
                             alface, milho e anéis de cebola
                         </p>
 
-                        <p class="price">
-                            <span>R$</span> 21,90
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 21,90
                         </p>
                     </div>
                 </article>
+            </div>
+
+            <footer class="icon">
+                <img src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
+            </footer>
+        </section>
+
+        <section class="section-delivery">
+            <article class="deliveryman-image">
+                <img src="./img/images/delivery-image.png" alt="Entregador delivery">
+            </article>
+
+            <article class="delivery-description">
+                <h2 class="delivery-description__title">Serviço de Delivery</h2>
+
+                <hr class="delivery-description__item">
+
+                <p class="delivery-description__text">
+                    <span class="delivery-description__decorated-text">A uma mordida</span>
+                    de ganhar <br> <span class="delivery-description__decorated-text">40% desconto</span>
+                </p>
+
+                <div class="delivery-description__telephone">
+                    <img src="./img/icons/phone-icon.svg" alt="Telefone"> (16) 95309-8121
+                </div>
             </article>
         </section>
+
+		<section id="drinks" class="our-menu">
+			<h2 class="our-menu__title">Menu</h2>
+
+			<hr class="our-menu__item">
+
+			<h3 class="our-menu__subtitle">Drinks</h3>
+
+			<div class="product-box">
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/dry-stout-image.jpg" alt="Foto da Dry Stout">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">Dry Stout</h4>
+
+                        <p class="product-description__text">
+                            Sabor de cereal torrado, lembrando café. Possui um amargor assertivo e
+							um final seco
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 22,90
+                        </p>
+                    </div>
+                </article>
+
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/pilsen-image.jpg" alt="Foto da Pilsen">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">Pilsen</h4>
+
+                        <p class="product-description__text">
+                            Sabor seco, com o lúpulo suave e o amargor considerado baixo ou médio
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 28,50
+                        </p>
+                    </div>
+                </article>
+
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/tequila-image.jpg" alt="Foto do Tequila">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">Tequila</h4>
+
+                        <p class="product-description__text">
+                            100% de Agave Azul, planta nativa do México, deixa a bebida mais saborosa
+							e ao mesmo tempo mais suave
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 164,90
+                        </p>
+                    </div>
+                </article>
+
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/american-ipa-image.jpg" alt="Foto da American IPA">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">American IPA</h4>
+
+                        <p class="product-description__text">
+                            Lúpulo varia de médio a alto, lúpulos americanos com qualidades cítricas,
+							frutadas e resinosas
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 19,90
+                        </p>
+                    </div>
+                </article>
+
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/pale-ale-image.jpg" alt="Foto da Pale Ale">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">Pale Ale</h4>
+
+                        <p class="product-description__text">
+                            Carrega um peculiar aroma terroso e herbal. Seu corpo fica mais robusto
+							e espumoso pela fermentação
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 13,50
+                        </p>
+                    </div>
+				</article>
+
+				<article class="product-card">
+                    <div class="product-image">
+                        <img src="./img/drinks-image/vergine-di-norimberga-image.jpg" alt="Foto da Vergine di Norimberga">
+                    </div>
+
+                    <div class="product-description">
+                        <h4 class="product-description__title">Vergine di Norimberga</h4>
+
+                        <p class="product-description__text">
+                            É velada e tem uma cor amarelo palha. A espuma cremosa completa sua bela forma
+                        </p>
+
+                        <p class="product-description__price">
+                            <span class="product-description__decorated-text">R$</span> 24,60
+                        </p>
+                    </div>
+				</article>
+			</div>
+
+			<footer class="icon">
+                <img src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
+            </footer>
+		</section>
     </main>
 
     <script src="./js/home-animations.js"></script>
