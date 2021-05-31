@@ -1,14 +1,13 @@
-<img scr="./img/icons/chapa-quente-logo.svg" alt="Logo Chapa Quente">
-
-# Chapa Quente
+<img width="80" src="./img/icons/chapa-quente-logo.svg" alt="Logo Chapa Quente">
 
 ### About
 Chapa Quente (Hot Grill) is a personal project, about a fictional burger place, aimed at selling fast food in general and drinks.
 
 ### Technologies / Softwares
 - HTML 5
-- CSS 3 / SASS
+- SASS
 - JavaScript (ECMAScript 2015+)
+- Adobe Illustrator (25.2)
 - Adobe Photoshop (22.0)
 
 ### Architecture / Conventions

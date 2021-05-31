@@ -9,17 +9,17 @@
 html,
 body
 	height: 100%
+	scroll-behavior: smooth
 	width: 100%
 
 	a
 		text-decoration: none
-
 	ul
 		list-style: none
 
 .header
 	@include mixins.flex-center
-	background: url("../img/images/header-bg-image.jpg") no-repeat center / cover
+	background: url("../img/images/header-bg-image.jpg") no-repeat center / cover fixed
 	flex-direction: column
 	height: 100vh
 	justify-content: space-around
@@ -39,7 +39,7 @@ body
 
 	.nav
 		align-self: flex-start
-		background-color: #000000AF
+		background-color: #000000D5
 		color: variables.$secondary-color
 		display: none
 		height: 100vh
@@ -69,6 +69,11 @@ body
 		@media (max-width: 450px)
 			width: 15rem
 
+		&__img
+			opacity: 0
+			transform: translateY(-100px)
+			transition: 1.25s ease-in
+
 	.apresentation
 		padding: 0 1rem
 
@@ -83,12 +88,15 @@ body
 			font-size: 0.9rem
 			padding: 1rem 0
 
+		&__title,
+		&__text
+			opacity: 0
+			transform: scale(0)
+			transition: 1.25s ease
+
 .icon
 	margin: 0 auto
 	width: 1.5rem
-
-.burgers
-	background: url("../img/images/section-burger-bg-image.png") no-repeat center / cover fixed
 
 .our-menu
 	@include mixins.section-container
@@ -144,6 +152,7 @@ body
 				&__title
 					@include mixins.text
 					@include mixins.product-text
+					color: variables.$primary-color
 					font-size: clamp(1.2rem, 0.5rem + 3vw, 1.4rem)
 					font-weight: 700
 
@@ -178,20 +187,30 @@ body
 						height: 100%
 
 .section-delivery
+	align-items: center
 	background: linear-gradient(#E0E0E0 65%, #A1A1A1 35%)
 	display: flex
-	height: auto
+	height: -moz-fit-content
+	height: fit-content
 	justify-content: space-around
 
-	.deliveryman-image
+	.deliveryman-box
+		height: -moz-fit-content
+		height: fit-content
+		opacity: 0
+		transform: translateX(-50px)
+		transition: 1s ease-out
+		width: -moz-fit-content
 		width: fit-content
 
-		img
+		&__image
 			width: 100%
 
 	.delivery-description
 		@include mixins.text
-		align-self: center
+		opacity: 0
+		transform: scale(0)
+		transition: 1.25s ease-out
 
 		&__title
 			@include mixins.heading
@@ -242,8 +261,143 @@ body
 			margin-right: 0.5rem
 
 	@media (max-width: 800px)
-		.deliveryman-image
+		.deliveryman-box
 			display: none
 
-.nav.menu--active
-	display: block
+.about
+	background-color: #E0E0E0
+	padding: 2.5rem 0 1rem 0
+
+	.about-section
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		margin: 0 auto
+		max-width: 1000px
+		@media (max-width: 980px)
+			.first-card
+				order: 0
+			.second-card
+				order: 1
+			.third-card
+				order: 3
+			.fourth-card
+				order: 2
+
+		.card-about
+			margin: 1rem
+			width: 450px
+
+			&__title
+				@include mixins.heading
+				font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem)
+				padding: 1rem 1rem 0.5rem 1rem
+				text-align: left
+
+			&__text
+				@include mixins.text
+				font-size: 1rem
+				line-height: 1.55rem
+				opacity: 0
+				padding: 0 0 1rem 1rem
+				text-align: left
+				transform: translateY(-100px)
+				transition: 1.25s ease-out
+
+			&__item
+				border: 2px solid variables.$quartenary-color
+				margin: 0 0 1rem 1rem
+				width: 70px
+
+			&__quote-decoration
+				font-size: 4rem
+				margin: 0 0 0 1rem
+
+			&__image
+				width: 100%
+
+.partners
+	@include mixins.section-container
+
+	&__title
+		@include mixins.heading
+		font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem)
+		padding: 0 0 0.5rem 0
+		text-align: center
+
+	&__item
+		border: 2px solid variables.$quartenary-color
+		margin: 0 auto
+		width: 50px
+
+	.partners-img
+		align-items: center
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		padding: 2rem
+
+		&__logo
+			height: -moz-fit-content
+			height: fit-content
+			margin: 2rem
+			width: 7rem
+
+.localization-map
+	border-top: 5px solid #191D20
+
+.footer
+	align-items: center
+	background-color: #191D20
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-evenly
+	padding: 2.5rem 0
+
+	&-logo
+		width: 13rem
+
+	&-schedules
+		padding: 1rem
+
+		&__title
+			@include mixins.heading
+			color: variables.$secondary-color
+			text-align: left
+
+		&__item
+			border: 2px solid variables.$quartenary-color
+			width: 40px
+
+		&-container
+			padding: 1rem 0
+
+			&__text
+				@include mixins.text
+				color: variables.$secondary-color
+				padding: 0.25rem 0
+				text-align: left
+
+		&-address
+			align-items: center
+			display: flex
+
+			&__icon
+				margin-right: 0.5rem
+				width: 15px
+
+			&__text
+				@include mixins.text
+				color: variables.$quartenary-color
+				font-weight: 700
+				text-align: left
+
+	.footer-social-medias
+		align-items: center
+		display: flex
+
+		&-container
+			margin: 5px
+
+			&__icon
+				width: 50px

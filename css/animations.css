@@ -1,0 +1,28 @@
+.header .nav.menu--active,
+.section-delivery .nav.menu--active,
+.about .about-section .card-about .nav.menu--active {
+  display: block;
+}
+.header .effect--appear-fall,
+.section-delivery .effect--appear-fall,
+.about .about-section .card-about .effect--appear-fall {
+  opacity: 1;
+  transform: translateY(calc(-100px + 100px));
+  transition: 1.25s ease-out;
+}
+.header .effect--appear-grow,
+.section-delivery .effect--appear-grow,
+.about .about-section .card-about .effect--appear-grow {
+  opacity: 1;
+  transform: scale(1);
+  transition: 1.25s ease-out;
+}
+.header .effect--appear-slid-left,
+.section-delivery .effect--appear-slid-left,
+.about .about-section .card-about .effect--appear-slid-left {
+  opacity: 1;
+  transform: translateX(calc(-50px + 50px));
+  transition: 1s ease-out;
+}
+
+/*# sourceMappingURL=animations.css.map */
