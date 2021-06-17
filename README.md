@@ -1,4 +1,6 @@
-<img width="80" src="./img/icons/chapa-quente-logo.svg" alt="Logo Chapa Quente">
+<img width="80" src="./img/logo/chapa-quente-logo.svg" alt="Logo Chapa Quente">
+
+# Chapa Quente
 
 ### About
 Chapa Quente (Hot Grill) is a personal project, about a fictional burger place, aimed at selling fast food in general and drinks.

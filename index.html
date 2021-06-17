@@ -5,24 +5,20 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Não perca essa OPORTUNIDADE. Fique A Uma Mordida de Começar Bem!">
+	<meta name="google-site-verification" content="0PhQEbiFIY9XvPOAvADjVQiJm8tDioAWszmZNRrHPJA">
 	<title>Chapa Quente - Bem Vindo!</title>
-	<!-- CSS -->
 	<link rel="stylesheet" href="./css/home.css">
-	<!-- Animations -->
 	<link rel="stylesheet" href="./css/animations.css">
-	<!-- Favicon -->
 	<link rel="shortcut icon" href="./img/logo/chapa-quente-logo.svg" type="image/x-icon">
-	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@700&display=swap">
-	<!-- Google Search Console -->
-	<meta name="google-site-verification" content="0PhQEbiFIY9XvPOAvADjVQiJm8tDioAWszmZNRrHPJA" />
 </head>
 
 <body>
-	<header class="header">
+	<header id="top" class="header">
 		<button id="button--active" class="button">
-			<img src="./img/icons/menu-icon.svg" alt="Menu hambúrguer">
+			<img src="./img/icons/menu-icon.svg" alt="Menu">
 		</button>
 
 		<nav id="nav-menu" class="nav">
@@ -33,7 +29,7 @@
 				<li class="nav__item"><a href="#partners" class="nav__link">Parceiros</a></li>
 				<li class="nav__item">
 					<button id="button--disabled" class="button">
-						<img src="./img/icons/exit-icon.svg" alt="Botão para fechar o menu">
+						<img src="./img/icons/exit-icon.svg" alt="Fechar menu">
 					</button>
 				</li>
 			</ul>
@@ -49,7 +45,7 @@
 			<p class="apresentation__text load--appear-grow">Bem vindo à hamburgueria Chapa Quente. Sinta-se à vontade!</p>
 
 			<footer class="icon">
-				<img src="./img/icons/triangle-white-icon.svg" alt="Veja mais">
+				<img class="icon__img" src="./img/icons/triangle-white-icon.svg" alt="Veja mais">
 			</footer>
 		</article>
 	</header>
@@ -198,13 +194,13 @@
 			</section>
 
 			<footer class="icon">
-				<img src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
+				<img class="icon__img" src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
 			</footer>
 		</section>
 
 		<section class="section-delivery">
 			<article class="deliveryman-box scroll--appear-slid-left">
-				<img class="deliveryman-box__image" src="./img/images/delivery-image.png" alt="Entregador delivery">
+				<img class="deliveryman-box__image" src="./img/images/delivery-image.png" alt="Entregador de delivery">
 			</article>
 
 			<article class="delivery-description scroll--appear-grow">
@@ -345,7 +341,7 @@
 			</section>
 
 			<footer class="icon">
-				<img src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
+				<img class="icon__img" src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
 			</footer>
 		</section>
 
@@ -371,7 +367,7 @@
 					</p>
 				</article>
 
-				<article class="card-about second-card second-card">
+				<article class="card-about second-card">
 					<img class="card-about__image" src="./img/images/local-image.jpg" alt="Estabelecimento">
 				</article>
 
@@ -391,7 +387,9 @@
 						"tômpero".
 					</p>
 
-					<p class="card-about__text scroll--appear-fall">- JACQUIN, Érick <br> <strong>Chef de cozinha</strong></p>
+					<p class="card-about__text scroll--appear-fall">
+						- JACQUIN, Érick <br> <strong>Chef de cozinha</strong>
+					</p>
 
 					<p class="card-about__quote-decoration">&#10078;</p>
 				</article>
@@ -406,83 +404,94 @@
 
 			<article class="partners-img">
 				<div class="partners-img__logo">
-					<a href="http://www.biaccino.com/" target="_blank">
+					<a rel="noopener" href="http://www.biaccino.com/" target="_blank">
 						<img src="./img/partners-logo/biaccino-logo.svg" alt="Biaccino">
 					</a>
 				</div>
 
 				<div class="partners-img__logo">
-					<a href="https://www.ifood.com.br/" target="_blank">
+					<a rel="noopener" href="https://www.ifood.com.br/" target="_blank">
 						<img src="./img/partners-logo/ifood-logo.svg" alt="iFood">
 					</a>
 				</div>
 
 				<div class="partners-img__logo">
-					<a href="https://www.schornstein.com.br/novo/home" target="_blank">
+					<a rel="noopener" href="https://www.schornstein.com.br/novo/home" target="_blank">
 						<img src="./img/partners-logo/schornstein-logo.svg" alt="Schornstein">
 					</a>
 				</div>
 
 				<div class="partners-img__logo">
-					<a href="https://www.seara.com.br/" target="_blank">
+					<a rel="noopener" href="https://www.seara.com.br/" target="_blank">
 						<img src="./img/partners-logo/seara-logo.svg" alt="Seara">
+					</a>
+				</div>
+			</article>
+
+			<footer class="icon">
+				<img class="icon__img" src="./img/icons/triangle-black-icon.svg" alt="Veja mais">
+			</footer>
+		</section>
+
+		<section class="localization-map">
+			<iframe title="Mapa para chegar ao estabelecimento" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1854.7702217882254!2d-48.36402144614445!3d-21.60385438198794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b91fd15f4bd28d%3A0x718002a2e98730ca!2sR.%20Rui%20Barbosa%2C%20Mat%C3%A3o%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623309608884!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" loading="lazy"></iframe>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<section class="footer-informations">
+			<article class="footer-informations-logo">
+				<a href="./index.html">
+					<img src="./img/logo/chapa-quente-black-white-logo.svg" alt="Logo Chapa Quente">
+				</a>
+			</article>
+
+			<article class="footer-informations-schedules">
+				<header class="footer-informations-schedules__title">
+					<h3>Horários</h3>
+					<hr class="footer-informations-schedules__item">
+				</header>
+
+				<ul class="footer-informations-schedules-container">
+					<li class="footer-informations-schedules-container__text">Sábado: 12:00h - 19:30h</li>
+					<li class="footer-informations-schedules-container__text">Domingo: 17:00h - 23:00h</li>
+					<li class="footer-informations-schedules-container__text">Segunda: Fechado</li>
+					<li class="footer-informations-schedules-container__text">Terça a Sexta: 18:30h - 23:00h</li>
+				</ul>
+
+				<div class="footer-informations-schedules-address">
+					<img class="footer-informations-schedules-address__icon" src="./img/icons/map-marker-icon.svg" alt="Local">
+					<p class="footer-informations-schedules-address__text">R. Rui Barbosa, 140. Matão-SP</p>
+				</div>
+				<hr class="footer-informations-schedules__item">
+			</article>
+
+			<article class="footer-informations-social-medias">
+				<div class="footer-informations-social-medias-container">
+					<a rel="noopener" href="https://www.facebook.com/" target="_blank">
+						<img class="footer-informations-social-medias-container__icon" src="./img/icons/facebook-logo.svg" alt="Facebook">
+					</a>
+				</div>
+
+				<div class="footer-informations-social-medias-container">
+					<a rel="noopener" href="https://www.instagram.com/" target="_blank">
+						<img class="footer-informations-social-medias-container__icon" src="./img/icons/instagram-logo.svg" alt="Instagram">
+					</a>
+				</div>
+
+				<div class="footer-informations-social-medias-container">
+					<a rel="noopener" href="https://wa.me/14705235733" target="_blank">
+						<img class="footer-informations-social-medias-container__icon" src="./img/icons/whatsapp-logo.svg" alt="WhatsApp">
 					</a>
 				</div>
 			</article>
 		</section>
 
-		<section class="localization-map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.556382637278!2d-48.36688788559347!3d-21.603232698084717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b91fd15f4bd28d%3A0x718002a2e98730ca!2sR.%20Rui%20Barbosa%20-%20Centro%2C%20Mat%C3%A3o%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621617780804!5m2!1spt-BR!2sbr"
-			width="100%" height="300" style="border:0;"></iframe>
-		</section>
-	</main>
-
-	<footer class="footer">
-		<article class="footer-logo">
-			<img src="./img/logo/chapa-quente-black-white-logo.svg" alt="Logo Chapa Quente">
-		</article>
-
-		<article class="footer-schedules">
-			<header class="footer-schedules__title">
-				<h3>Horários</h3>
-				<hr class="footer-schedules__item">
-			</header>
-
-			<ul class="footer-schedules-container">
-				<li class="footer-schedules-container__text">Sábado: 12:00h - 19:30h</li>
-				<li class="footer-schedules-container__text">Domingo: 17:00h - 23:00h</li>
-				<li class="footer-schedules-container__text">Segunda: Fechado</li>
-				<li class="footer-schedules-container__text">Terça a Sexta: 18:30h - 23:00h</li>
-			</ul>
-
-			<div class="footer-schedules-address">
-				<img class="footer-schedules-address__icon" src="./img/icons/map-marker-icon.svg" alt="Local">
-				<p class="footer-schedules-address__text">R. Rui Barbosa, 140. Matão-SP</p>
-			</div>
-		</article>
-
-		<article class="footer-social-medias">
-			<div class="footer-social-medias-container">
-				<a href="https://www.facebook.com/" target="_blank">
-					<img class="footer-social-medias-container__icon" src="./img/icons/facebook-logo.svg" alt="Facebook">
-				</a>
-			</div>
-
-			<div class="footer-social-medias-container">
-				<a href="https://www.instagram.com/" target="_blank">
-					<img class="footer-social-medias-container__icon" src="./img/icons/instagram-logo.svg" alt="Instagram">
-				</a>
-			</div>
-
-			<div class="footer-social-medias-container">
-				<a href="https://wa.me/14705235733" target="_blank">
-					<img class="footer-social-medias-container__icon" src="./img/icons/whatsapp-logo.svg" alt="WhatsApp">
-				</a>
-			</div>
-		</article>
+		<div class="footer-arrow-icon">
+			<a href="#top"><img src="./img/icons/arrow-up-drop-circle.svg" alt="Voltar ao topo"></a>
+		</div>
 	</footer>
 
-	<!-- Animations -->
 	<script src="./js/animations.js"></script>
 </body>
 

@@ -28,12 +28,11 @@ body ul {
   height: 100vh;
   justify-content: space-around;
   padding: 0.5rem 0;
-  width: 100%;
 }
 .header .button {
   background-color: #FFFFFFB9;
-  border: 1.5px solid #000;
   border-radius: 0.5rem;
+  border: 1.5px solid #000000;
   cursor: pointer;
   font-size: 0;
   height: 40px;
@@ -43,12 +42,14 @@ body ul {
 }
 .header .nav {
   align-self: flex-start;
-  background-color: #000000D5;
-  color: #FFF;
-  display: none;
+  background-color: #000000;
+  color: #FFFFFF;
   height: 100vh;
   padding: 0.5rem;
   position: absolute;
+  transform: translateX(-1000px);
+  transition: 1s cubic-bezier(0, 1.01, 1, 1);
+  visibility: hidden;
   width: 25%;
   z-index: 2;
 }
@@ -61,14 +62,29 @@ body ul {
   text-align: center;
 }
 .header .nav__link {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFF;
+  color: #FFFFFF;
   display: block;
   font-size: clamp(0.5rem, 0.5rem + 3vw, 1rem);
   font-weight: 400;
+  margin: 0 auto;
   padding: 1rem;
+  transition: 0.5s ease-out;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header .nav__link::after {
+  background: #FFF;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+}
+.header .nav__link:hover::after {
+  transition: 0.5s ease-out;
+  width: 100%;
 }
 .header .logo {
   background-color: #FFFFFF46;
@@ -90,17 +106,17 @@ body ul {
   padding: 0 1rem;
 }
 .header .apresentation__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
-  color: #FFF;
+  color: #FFFFFF;
   font-size: clamp(1.45rem, 1.15rem + 3vw, 2.5rem);
 }
 .header .apresentation__text {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFF;
+  color: #FFFFFF;
   font-size: 0.9rem;
   padding: 1rem 0;
 }
@@ -114,13 +130,16 @@ body ul {
   margin: 0 auto;
   width: 1.5rem;
 }
+.icon__img {
+  animation: moving--icon 1s ease-in infinite alternate;
+}
 
 .our-menu {
   background-color: #F0F0F0;
   padding: 2.5rem;
 }
 .our-menu__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 0.5rem + 3vw, 1.35rem);
@@ -128,7 +147,7 @@ body ul {
   padding: 1rem;
 }
 .our-menu__subtitle {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
@@ -136,6 +155,7 @@ body ul {
   padding: 1rem;
 }
 .our-menu__item {
+  background-color: #A00117;
   border: 2px solid #A00117;
   margin: 0 auto;
   width: 30px;
@@ -150,8 +170,8 @@ body ul {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #FFF;
-  box-shadow: 0 0 10px #000;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px #000000;
   cursor: pointer;
   justify-content: space-around;
   margin: 1rem;
@@ -176,17 +196,17 @@ body ul {
   margin: 0.5rem;
 }
 .our-menu .product-box .product-card .product-description__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
   padding: 1rem;
-  color: #000;
+  color: #000000;
   font-size: clamp(1.2rem, 0.5rem + 3vw, 1.4rem);
   font-weight: 700;
 }
 .our-menu .product-box .product-card .product-description__text {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -196,7 +216,7 @@ body ul {
   line-height: 1.5rem;
 }
 .our-menu .product-box .product-card .product-description__price {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -244,7 +264,7 @@ body ul {
   width: 100%;
 }
 .section-delivery .delivery-description {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   opacity: 0;
@@ -252,7 +272,7 @@ body ul {
   transition: 1.25s ease-out;
 }
 .section-delivery .delivery-description__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 4vw, 5rem);
@@ -260,7 +280,7 @@ body ul {
   text-align: right;
 }
 .section-delivery .delivery-description__text {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 4vw, 2rem);
@@ -273,9 +293,10 @@ body ul {
   text-transform: uppercase;
   -webkit-text-fill-color: #F0F0F0;
   -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-color: #000000;
 }
 .section-delivery .delivery-description__item {
+  background-color: #A00117;
   border: 2px solid #A00117;
   float: right;
   margin-right: 2rem;
@@ -284,24 +305,25 @@ body ul {
 .section-delivery .delivery-description__telephone {
   align-items: center;
   background-color: #A00117;
-  border: none;
   border-radius: 3rem;
-  color: #FFF;
+  border: none;
+  color: #FFFFFF;
   cursor: default;
   display: flex;
+  float: right;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.5rem, 4vw, 1.30rem);
   font-weight: 600;
-  float: right;
   justify-content: center;
   margin: 2rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   outline-style: none;
   padding: 1rem 2rem;
-  max-width: fit-content;
 }
 .section-delivery .delivery-description img {
-  width: 20px;
   margin-right: 0.5rem;
+  width: 20px;
 }
 @media (max-width: 800px) {
   .section-delivery .deliveryman-box {
@@ -339,26 +361,32 @@ body ul {
   width: 450px;
 }
 .about .about-section .card-about__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
 }
 .about .about-section .card-about__text {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.55rem;
   opacity: 0;
-  padding: 0 0 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   text-align: left;
   transform: translateY(-100px);
   transition: 1.25s ease-out;
 }
+@media (max-width: 980px) {
+  .about .about-section .card-about__text {
+    text-align: justify;
+  }
+}
 .about .about-section .card-about__item {
+  background-color: #A00117;
   border: 2px solid #A00117;
   margin: 0 0 1rem 1rem;
   width: 70px;
@@ -376,7 +404,7 @@ body ul {
   padding: 2.5rem;
 }
 .partners__title {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
@@ -384,6 +412,7 @@ body ul {
   text-align: center;
 }
 .partners__item {
+  background-color: #A00117;
   border: 2px solid #A00117;
   margin: 0 auto;
   width: 50px;
@@ -407,66 +436,81 @@ body ul {
 }
 
 .footer {
-  align-items: center;
   background-color: #191D20;
+  padding: 2.5rem 0 1.5rem 0;
+}
+.footer-informations {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 2.5rem 0;
 }
-.footer-logo {
+.footer-informations-logo {
   width: 13rem;
 }
-.footer-schedules {
+.footer-informations-schedules {
   padding: 1rem;
 }
-.footer-schedules__title {
-  color: #000;
+.footer-informations-schedules__title {
+  color: #000000;
   text-align: center;
   font-family: "Playfair Display", serif;
-  color: #FFF;
+  color: #FFFFFF;
   text-align: left;
 }
-.footer-schedules__item {
+.footer-informations-schedules__item {
+  background-color: #A00117;
   border: 2px solid #A00117;
   width: 40px;
 }
-.footer-schedules-container {
+.footer-informations-schedules-container {
   padding: 1rem 0;
 }
-.footer-schedules-container__text {
-  color: #000;
+.footer-informations-schedules-container__text {
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFF;
+  color: #FFFFFF;
   padding: 0.25rem 0;
   text-align: left;
 }
-.footer-schedules-address {
+.footer-informations-schedules-address {
   align-items: center;
   display: flex;
 }
-.footer-schedules-address__icon {
-  margin-right: 0.5rem;
+.footer-informations-schedules-address__icon {
+  box-sizing: content-box;
+  padding: 0.25rem 0.5rem 0.25rem 0;
   width: 15px;
 }
-.footer-schedules-address__text {
-  color: #000;
+.footer-informations-schedules-address__text {
+  color: #000000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #A00117;
-  font-weight: 700;
+  color: #FFFFFF;
+  font-weight: 400;
   text-align: left;
 }
-.footer .footer-social-medias {
+.footer-informations .footer-informations-social-medias {
   align-items: center;
   display: flex;
 }
-.footer .footer-social-medias-container {
+.footer-informations .footer-informations-social-medias-container {
   margin: 5px;
 }
-.footer .footer-social-medias-container__icon {
+.footer-informations .footer-informations-social-medias-container__icon {
   width: 50px;
+}
+.footer-arrow-icon {
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: 0.3s ease-in;
+  width: 30px;
+}
+.footer-arrow-icon:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in;
 }
 
 /*# sourceMappingURL=home.css.map */

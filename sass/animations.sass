@@ -1,8 +1,11 @@
 .header,
 .section-delivery,
-.about .about-section .card-about
-	.nav.menu--active
-		display: block
+.about .about-section .card-about,
+.footer
+	.menu--active
+		transform: translateX(calc(-1000px + 1000px))
+		transition: 1s cubic-bezier(0,1.01,1,1)
+		visibility: visible
 
 	.effect--appear-fall
 		opacity: 1
@@ -18,3 +21,7 @@
 		opacity: 1
 		transform: translateX(calc(-50px + 50px))
 		transition: 1s ease-out
+
+	@keyframes moving--icon
+		100%
+			transform: translateY(15px)

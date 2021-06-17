@@ -31,7 +31,7 @@ addEventListener('scroll', () => {
 
 	const scrollAppearGrow = document.querySelectorAll('.scroll--appear-grow')
 	scrollAppearGrow.forEach(appearGrow => {
-		if (appearGrow.getBoundingClientRect().bottom < innerHeight) {
+		if (appearGrow.getBoundingClientRect().top < innerHeight) {
 			appearGrow.classList.add('effect--appear-grow')
 		}
 	})
