@@ -6,6 +6,7 @@
 
 html,
 body {
+  background-color: #F3F3F3;
   height: 100%;
   scroll-behavior: smooth;
   width: 100%;
@@ -23,7 +24,7 @@ body ul {
   align-items: center;
   display: flex;
   justify-content: center;
-  background: url("../img/images/header-bg-image.jpg") no-repeat center/cover fixed;
+  background: url("../img/images/header-bg-image.jpg") no-repeat center center/cover fixed;
   flex-direction: column;
   height: 100vh;
   justify-content: space-around;
@@ -32,7 +33,7 @@ body ul {
 .header .button {
   background-color: #FFFFFFB9;
   border-radius: 0.5rem;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #000;
   cursor: pointer;
   font-size: 0;
   height: 40px;
@@ -42,11 +43,11 @@ body ul {
 }
 .header .nav {
   align-self: flex-start;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #151515;
+  color: #FFF;
   height: 100vh;
-  padding: 0.5rem;
-  position: absolute;
+  padding: 1rem;
+  position: fixed;
   transform: translateX(-1000px);
   transition: 1s cubic-bezier(0, 1.01, 1, 1);
   visibility: hidden;
@@ -58,25 +59,38 @@ body ul {
     width: 55%;
   }
 }
-.header .nav__item {
-  text-align: center;
+.header .nav__title {
+  border-bottom: 3px solid #A00117;
+  color: #FFF;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(0.9rem, 0.5rem + 3vw, 2rem);
+  padding-left: 0.5rem;
+  text-align: left;
 }
-.header .nav__link {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  color: #FFFFFF;
-  display: block;
-  font-size: clamp(0.5rem, 0.5rem + 3vw, 1rem);
-  font-weight: 400;
-  margin: 0 auto;
+.header .nav__item {
+  align-items: center;
+  display: flex;
   padding: 1rem;
-  transition: 0.5s ease-out;
+  text-align: left;
   width: -moz-fit-content;
   width: fit-content;
 }
+.header .nav__img {
+  height: 13%;
+  margin-right: 0.5rem;
+  width: 13%;
+}
+.header .nav__link {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #FFF;
+  display: block;
+  font-size: clamp(0.5rem, 0.5rem + 3vw, 1rem);
+  font-weight: 400;
+  text-align: left;
+}
 .header .nav__link::after {
-  background: #FFF;
   content: "";
   display: block;
   height: 3px;
@@ -85,6 +99,18 @@ body ul {
 .header .nav__link:hover::after {
   transition: 0.5s ease-out;
   width: 100%;
+}
+.header .nav__burger::after {
+  background: #FDCA6E;
+}
+.header .nav__drinks::after {
+  background: #E74393;
+}
+.header .nav__about::after {
+  background: #74B8FF;
+}
+.header .nav__partners::after {
+  background: #FAB19F;
 }
 .header .logo {
   background-color: #FFFFFF46;
@@ -106,17 +132,17 @@ body ul {
   padding: 0 1rem;
 }
 .header .apresentation__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
-  color: #FFFFFF;
+  color: #FFF;
   font-size: clamp(1.45rem, 1.15rem + 3vw, 2.5rem);
 }
 .header .apresentation__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFFFFF;
+  color: #FFF;
   font-size: 0.9rem;
   padding: 1rem 0;
 }
@@ -135,11 +161,11 @@ body ul {
 }
 
 .our-menu {
-  background-color: #F0F0F0;
+  background-color: #F3F3F3;
   padding: 2.5rem;
 }
 .our-menu__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 0.5rem + 3vw, 1.35rem);
@@ -147,7 +173,7 @@ body ul {
   padding: 1rem;
 }
 .our-menu__subtitle {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
@@ -164,14 +190,16 @@ body ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1500px;
   padding: 1rem 0;
 }
 .our-menu .product-box .product-card {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 10px #000000;
+  background-color: #FFF;
+  box-shadow: 0 0 10px #000;
   cursor: pointer;
   justify-content: space-around;
   margin: 1rem;
@@ -196,17 +224,17 @@ body ul {
   margin: 0.5rem;
 }
 .our-menu .product-box .product-card .product-description__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
   padding: 1rem;
-  color: #000000;
+  color: #000;
   font-size: clamp(1.2rem, 0.5rem + 3vw, 1.4rem);
   font-weight: 700;
 }
 .our-menu .product-box .product-card .product-description__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -216,14 +244,14 @@ body ul {
   line-height: 1.5rem;
 }
 .our-menu .product-box .product-card .product-description__price {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   text-align: left;
   padding: 1rem;
   color: #1F1104;
-  font-weight: 700;
   font-size: clamp(0.75rem, 0.70rem + 3vw, 1.35rem);
+  font-weight: 700;
 }
 .our-menu .product-box .product-card .product-description__decorated-text {
   font-size: clamp(0.55rem, 0.5rem + 3vw, 1rem);
@@ -238,14 +266,25 @@ body ul {
     width: 200px;
   }
   .our-menu .product-box .product-card .product-image img {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
+}
+
+.custom-shape {
+  transform: rotate(180deg);
+}
+.custom-shape__svg {
+  display: block;
+  width: 100%;
+}
+.custom-shape__path {
+  fill: #E0E0E0;
 }
 
 .section-delivery {
   align-items: center;
-  background: linear-gradient(#E0E0E0 65%, #A1A1A1 35%);
+  background-color: #E0E0E0;
   display: flex;
   height: -moz-fit-content;
   height: fit-content;
@@ -264,7 +303,7 @@ body ul {
   width: 100%;
 }
 .section-delivery .delivery-description {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   opacity: 0;
@@ -272,7 +311,7 @@ body ul {
   transition: 1.25s ease-out;
 }
 .section-delivery .delivery-description__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 4vw, 5rem);
@@ -280,7 +319,7 @@ body ul {
   text-align: right;
 }
 .section-delivery .delivery-description__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 4vw, 2rem);
@@ -288,12 +327,12 @@ body ul {
   text-align: right;
 }
 .section-delivery .delivery-description__decorated-text {
+  -webkit-text-fill-color: #F3F3F3;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke: 2px;
   font-family: Arial, sans-serif;
   font-size: clamp(1rem, 4vw, 2.55rem);
   text-transform: uppercase;
-  -webkit-text-fill-color: #F0F0F0;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: #000000;
 }
 .section-delivery .delivery-description__item {
   background-color: #A00117;
@@ -307,7 +346,7 @@ body ul {
   background-color: #A00117;
   border-radius: 3rem;
   border: none;
-  color: #FFFFFF;
+  color: #FFF;
   cursor: default;
   display: flex;
   float: right;
@@ -361,7 +400,7 @@ body ul {
   width: 450px;
 }
 .about .about-section .card-about__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
@@ -369,7 +408,7 @@ body ul {
   text-align: left;
 }
 .about .about-section .card-about__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
@@ -400,11 +439,11 @@ body ul {
 }
 
 .partners {
-  background-color: #F0F0F0;
+  background-color: #F3F3F3;
   padding: 2.5rem;
 }
 .partners__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.35rem, 0.5rem + 3vw, 2.15rem);
@@ -428,22 +467,37 @@ body ul {
   height: -moz-fit-content;
   height: fit-content;
   margin: 2rem;
+  transition: 0.3s ease-in;
   width: 7rem;
 }
+.partners .partners-img__logo:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
+  transition: 0.3s ease-in;
+}
 
-.localization-map {
-  border-top: 5px solid #191D20;
+.footer-shape {
+  transform: rotate(180deg);
+}
+.footer-shape__svg {
+  display: block;
+  width: 100%;
+}
+.footer-shape__path {
+  fill: #191D20;
 }
 
 .footer {
   background-color: #191D20;
-  padding: 2.5rem 0 1.5rem 0;
+  padding-top: 2rem;
 }
 .footer-informations {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 1500px;
 }
 .footer-informations-logo {
   width: 13rem;
@@ -452,10 +506,10 @@ body ul {
   padding: 1rem;
 }
 .footer-informations-schedules__title {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Playfair Display", serif;
-  color: #FFFFFF;
+  color: #FFF;
   text-align: left;
 }
 .footer-informations-schedules__item {
@@ -467,10 +521,10 @@ body ul {
   padding: 1rem 0;
 }
 .footer-informations-schedules-container__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFFFFF;
+  color: #FFF;
   padding: 0.25rem 0;
   text-align: left;
 }
@@ -484,10 +538,10 @@ body ul {
   width: 15px;
 }
 .footer-informations-schedules-address__text {
-  color: #000000;
+  color: #000;
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #FFFFFF;
+  color: #FFF;
   font-weight: 400;
   text-align: left;
 }
@@ -501,16 +555,28 @@ body ul {
 .footer-informations .footer-informations-social-medias-container__icon {
   width: 50px;
 }
-.footer-arrow-icon {
+.footer-copyright {
+  background-color: #151515;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+}
+.footer-copyright__text {
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  text-align: center;
+}
+.footer-copyright .footer-arrow-icon {
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 auto;
-  transition: 0.3s ease-in;
-  width: 30px;
+  height: 35px;
+  margin: 1rem auto 0 auto;
+  transition: 0.3s ease-out;
+  width: 35px;
 }
-.footer-arrow-icon:hover {
-  transform: translateY(-5px);
-  transition: 0.3s ease-in;
+.footer-copyright .footer-arrow-icon:hover {
+  transform: translateY(-10%);
+  transition: 0.3s ease-out;
 }
 
 /*# sourceMappingURL=home.css.map */

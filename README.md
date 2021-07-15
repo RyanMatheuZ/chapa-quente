@@ -3,7 +3,7 @@
 # Chapa Quente
 
 ### About
-Chapa Quente (Hot Grill) is a personal project, about a fictional burger place, aimed at selling fast food in general and drinks.
+Chapa Quente is a personal project, about a fictional burger place, aimed at selling fast food in general and drinks.
 
 ### Technologies / Softwares
 - HTML 5
