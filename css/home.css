@@ -272,7 +272,7 @@ body ul {
 }
 
 .custom-shape {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(-2%);
 }
 .custom-shape__svg {
   display: block;
