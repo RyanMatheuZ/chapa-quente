@@ -1,9 +1,9 @@
-<img width="80" src="./img/logo/chapa-quente-logo.svg" alt="Logo Chapa Quente">
+<img width="80" src="./img/logo/chapa-quente-logo.svg" alt="Logo Chapa Quente" title="Logo Chapa Quente">
 
 # Chapa Quente
 
 ### About
-Chapa Quente is a personal project, about a fictional burger place, aimed at selling fast food in general and drinks.
+Chapa Quente is a personal project, about a fictitious burger place, aimed at selling fast food in general and drinks.
 
 ### Technologies / Softwares
 - HTML 5
